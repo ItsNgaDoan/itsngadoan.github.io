@@ -199,21 +199,20 @@
     }
 
     .skill-card {
-      background: white;
-      padding: 18px;
-      border-radius: var(--radius);
+      background: #f4f7f5;
+      padding: 10px 14px;
+      border-radius: 999px;
       text-align: center;
       font-family: Arial, sans-serif;
-      font-weight: 600;
+      font-weight: 500;
+      font-size: 0.9rem;
       color: var(--primary);
-      box-shadow: var(--shadow);
-      transition: transform var(--transition), box-shadow var(--transition);
+      box-shadow: none;
+    
+      cursor: default;   /* important */
+      transition: none;  /* remove animation */
     }
 
-    .skill-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-    }
 
     .projects-grid,
     .experience-list {
@@ -478,6 +477,20 @@
 
     <div class="projects-grid">
 
+          <div class="project-card">
+        <div>
+          <h3>Data Transformation & ETL Migration — Fonterra Internship Project</h3>
+          <p>
+            Supported the migration of legacy ETL workflows from Alteryx to Microsoft Fabric to improve automation and data quality.
+          </p>
+          <p>
+            Focused on pipeline reliability, structured transformation logic, and reducing manual processing in operational reporting workflows.
+          </p>
+          <p class="tools-line"><strong>Tools / Techniques:</strong> Microsoft Fabric, Dataflows Gen2, Pipelines, UAT, ETL Migration</p>
+        </div>
+        <a href="https://github.com/ItsNgaDoan/fonterra-data-transformation-upgrade-alteryx-to-fabric" target="_blank">View Project →</a>
+      </div>
+
       <div class="project-card">
         <div>
           <h3>Product Analytics & Data Engineering</h3>
@@ -504,20 +517,6 @@
           <p class="tools-line"><strong>Tools / Techniques:</strong> AHP, Demand Simulation, Scenario Analysis, Supply Chain Strategy</p>
         </div>
         <a href="https://github.com/ItsNgaDoan/supply-chain-strategy-under-uncertainty" target="_blank">View Project →</a>
-      </div>
-
-      <div class="project-card">
-        <div>
-          <h3>Data Transformation & ETL Migration</h3>
-          <p>
-            Supported the migration of legacy ETL workflows from Alteryx to Microsoft Fabric to improve automation and data quality.
-          </p>
-          <p>
-            Focused on pipeline reliability, structured transformation logic, and reducing manual processing in operational reporting workflows.
-          </p>
-          <p class="tools-line"><strong>Tools / Techniques:</strong> Microsoft Fabric, Dataflows Gen2, Pipelines, UAT, ETL Migration</p>
-        </div>
-        <a href="https://github.com/ItsNgaDoan/data-transformation-upgrade-alteryx-to-fabric" target="_blank">View Project →</a>
       </div>
 
       <div class="project-card">
@@ -577,8 +576,7 @@
 
       <p>
         Over two years, I grafted around 100,000 macadamia trees, improving to up to 500 trees a day — roughly 3× typical beginner productivity through continuous improvement of technique and workflow.
-        These experiences shaped my work ethic and strengthened my understanding of how consistency, teamwork, and incremental process improvements influence productivity in large-scale operations.
-      </p>
+        These experiences shaped my work ethic and strengthened my understanding of how consistency, teamwork, and incremental process improvements influence productivity in large-scale operations. They also developed my resilience, agility, and persistence.
     </div>
 
     <div style="text-align:center; margin: 40px 0; color: var(--muted); font-family: Arial, sans-serif;">
