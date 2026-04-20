@@ -37,7 +37,7 @@
 
     .container {
       width: 90%;
-      max-width: 1100px;
+      max-width: 1120px;
       margin: auto;
     }
 
@@ -110,7 +110,7 @@
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 730px;
       color: var(--muted);
       margin-bottom: 34px;
       font-size: 1.04rem;
@@ -171,7 +171,7 @@
       padding: 50px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      max-width: 700px;
+      max-width: 760px;
       margin: 0 auto;
       text-align: left;
       line-height: 1.85;
@@ -215,35 +215,40 @@
       box-shadow: var(--shadow-hover);
     }
 
-    .projects-grid {
+    .projects-grid,
+    .experience-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
       gap: 22px;
     }
 
-    .project-card {
+    .project-card,
+    .experience-card {
       background: white;
       padding: 28px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      min-height: 290px;
+      justify-content: flex-start;
       transition: transform var(--transition), box-shadow var(--transition);
     }
 
-    .project-card:hover {
+    .project-card:hover,
+    .experience-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-hover);
     }
 
-    .project-card h3 {
-      margin-bottom: 12px;
+    .project-card h3,
+    .experience-card h3 {
+      margin-bottom: 10px;
       color: var(--deep);
+      line-height: 1.35;
     }
 
-    .project-card p {
+    .project-card p,
+    .experience-card p {
       color: var(--muted);
       margin-bottom: 12px;
     }
@@ -253,11 +258,36 @@
       font-weight: bold;
       text-decoration: none;
       transition: letter-spacing var(--transition), color var(--transition);
+      margin-top: auto;
     }
 
     .project-card a:hover {
       letter-spacing: 0.02em;
       color: var(--deep);
+    }
+
+    .project-meta,
+    .meta {
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .tools-line {
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .experience-card ul {
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .experience-card li {
+      margin-bottom: 10px;
     }
 
     .more-projects {
@@ -356,10 +386,6 @@
       .about-box {
         padding: 34px 26px;
       }
-
-      .project-card {
-        min-height: auto;
-      }
     }
   </style>
 </head>
@@ -374,6 +400,7 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#personal">Beyond</a>
         <a href="#contact">Contact</a>
       </div>
@@ -411,23 +438,12 @@
       </p>
 
       <p>
-        I started in agricultural environments across Australia and New Zealand,
-        where I developed a practical understanding of how operations run — and how small inefficiencies can scale into larger problems.
+        It has shaped much of my journey — from stepping beyond Vietnam to working across farms and operations in Australia and New Zealand, from finance to agriculture and supply chain, and more recently, to rebuilding legacy ETL workflows in Microsoft Fabric.
       </p>
 
       <p>
-        Alongside this, my experience in finance strengthened my understanding of cost, performance, and decision-making,
-        shaping how I approach analytical problems from both an operational and financial perspective.
-      </p>
-
-      <p>
-        More recently, I have worked on data transformation and analytics projects,
-        including building data pipelines, modelling data, and translating insights into decisions.
-      </p>
-
-      <p>
-        I aim to apply data and analytical thinking to improve real-world systems,
-        particularly in supply chain and operational environments.
+        I am particularly interested in how data can improve operational performance, reduce inefficiencies,
+        and support better decisions in real-world environments.
       </p>
     </div>
   </div>
@@ -441,14 +457,17 @@
     <div class="skills-grid">
       <div class="skill-card">SQL</div>
       <div class="skill-card">Python</div>
-      <div class="skill-card">Power BI</div>
+      <div class="skill-card">Data Modelling</div>
+      <div class="skill-card">ETL & Data Pipelines</div>
       <div class="skill-card">Azure Data Factory</div>
       <div class="skill-card">Microsoft Fabric</div>
-      <div class="skill-card">ETL & Data Pipelines</div>
-      <div class="skill-card">Data Modelling</div>
+      <div class="skill-card">Power BI</div>
+      <div class="skill-card">Supply Chain Analytics</div>
+      <div class="skill-card">Optimisation</div>
+      <div class="skill-card">Statistics</div>
       <div class="skill-card">Data Visualisation</div>
       <div class="skill-card">Data Storytelling</div>
-      <div class="skill-card">Supply Chain Analytics</div>
+      <div class="skill-card">Machine Learning</div>
     </div>
   </div>
 </section>
@@ -467,12 +486,11 @@
             Built a star-schema data warehouse and ETL pipeline using Azure Data Factory to integrate product, sales, and quality data.
           </p>
           <p>
-            Used SQL to analyse <strong>4 key areas</strong>: profitability, regional performance, product configuration, and scrap-related inefficiencies.
+            Analysed <strong>4 key areas</strong>: profitability, regional performance, product configuration, and scrap-related inefficiencies.
           </p>
+          <p class="tools-line"><strong>Tools / Techniques:</strong> Azure Data Factory, SQL, Data Warehouse Design, Star Schema</p>
         </div>
-        <a href="https://github.com/ItsNgaDoan/product-analytics-data-driven-strategy" target="_blank">
-          View Project →
-        </a>
+        <a href="https://github.com/ItsNgaDoan/product-analytics-data-driven-strategy" target="_blank">View Project →</a>
       </div>
 
       <div class="project-card">
@@ -484,10 +502,9 @@
           <p>
             Tested the strategy across <strong>30 demand scenarios</strong> and <strong>4 special demand patterns</strong> to evaluate resilience under uncertainty.
           </p>
+          <p class="tools-line"><strong>Tools / Techniques:</strong> AHP, Demand Simulation, Scenario Analysis, Supply Chain Strategy</p>
         </div>
-        <a href="https://github.com/ItsNgaDoan/supply-chain-strategy-under-uncertainty" target="_blank">
-          View Project →
-        </a>
+        <a href="https://github.com/ItsNgaDoan/supply-chain-strategy-under-uncertainty" target="_blank">View Project →</a>
       </div>
 
       <div class="project-card">
@@ -499,10 +516,23 @@
           <p>
             Focused on pipeline reliability, structured transformation logic, and reducing manual processing in operational reporting workflows.
           </p>
+          <p class="tools-line"><strong>Tools / Techniques:</strong> Microsoft Fabric, Dataflows Gen2, Pipelines, UAT, ETL Migration</p>
         </div>
-        <a href="https://github.com/ItsNgaDoan/data-transformation-upgrade-alteryx-to-fabric" target="_blank">
-          View Project →
-        </a>
+        <a href="https://github.com/ItsNgaDoan/data-transformation-upgrade-alteryx-to-fabric" target="_blank">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <div>
+          <h3>Project Scheduling Under Uncertainty</h3>
+          <p>
+            Evaluated a supply chain project with uncertain task durations and strict deadlines using probabilistic scheduling methods.
+          </p>
+          <p>
+            Compared schedule, cost, and risk trade-offs to support more informed project decisions under uncertainty.
+          </p>
+          <p class="tools-line"><strong>Tools / Techniques:</strong> PERT, Critical Path Analysis, Cost–Time Trade-off, Scenario Evaluation</p>
+        </div>
+        <a href="https://github.com/ItsNgaDoan/project-scheduling-under-uncertainty-supply-chain" target="_blank">View Project →</a>
       </div>
 
       <div class="project-card">
@@ -514,10 +544,9 @@
           <p>
             Examined trade patterns across <strong>5 years</strong> to identify diversification opportunities and support more resilient supply chain decisions.
           </p>
+          <p class="tools-line"><strong>Tools / Techniques:</strong> Clustering, Data Modelling, Trade Analysis, Power BI, R</p>
         </div>
-        <a href="https://github.com/ItsNgaDoan/nz-trade-resilience-analysis" target="_blank">
-          View Project →
-        </a>
+        <a href="https://github.com/ItsNgaDoan/nz-trade-resilience-analysis" target="_blank">View Project →</a>
       </div>
 
     </div>
@@ -529,6 +558,80 @@
   </div>
 </section>
 
+<section id="experience">
+  <div class="container">
+    <h2>Work Experience</h2>
+    <p class="section-desc">Professional and real-world experience</p>
+
+    <div class="about-box">
+      <p>
+        My resume doesn’t tell the full story.
+      </p>
+
+      <p>
+        From 2019 to 2024, I worked across farms, nurseries, and processing facilities in Australia and New Zealand under the Work and Holiday Visa scheme, adapting quickly to different operational environments, production systems, and team dynamics.
+      </p>
+
+      <p>
+        During this time, I collaborated with multicultural teams, completed horticulture certificate study alongside full-time work, travelled around 1,000 km a week between Bundaberg and Brisbane, and built strong endurance through physically demanding seasonal work.
+      </p>
+
+      <p>
+        Over two years, I grafted around 100,000 macadamia trees, improving to up to 500 trees a day — roughly 3× typical beginner productivity through continuous improvement of technique and workflow.
+        These experiences shaped my work ethic and strengthened my understanding of how consistency, teamwork, and incremental process improvements influence productivity in large-scale operations.
+      </p>
+    </div>
+
+    <div style="text-align:center; margin: 40px 0; color: var(--muted); font-family: Arial, sans-serif;">
+      These experiences continue to shape how I approach operational problems, data quality, and improvement work today.
+    </div>
+
+    <div class="experience-list">
+
+      <div class="experience-card">
+        <h3>Fonterra — Network Planning & Modelling Intern</h3>
+        <p class="meta">Auckland, New Zealand | Aug 2025 – Nov 2025</p>
+        <ul>
+          <li>Contributed to a Microsoft Fabric pilot rollout by migrating legacy Alteryx ETL workflows into automated data pipelines supporting Tactical Logistics Planning.</li>
+          <li>Built structured multi-layer dataflows covering staging, cleansing, transformation, and validation to improve data reliability.</li>
+          <li>Replaced manual Excel preparation with automated workflows and supported UAT, reconciliation, and defect investigation.</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>Dad & Son Coffee Farm — Agribusiness Data & Operations Analyst</h3>
+        <p class="meta">Gia Lai, Vietnam | Mar 2018 – Present</p>
+        <ul>
+          <li>Designed a relational data structure to integrate farm production, cost, and sales data across operations.</li>
+          <li>Built periodic reports on margin, yield, and cost efficiency for non-technical decision-makers.</li>
+          <li>Applied forecasting techniques to support demand, resource, and capacity planning.</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>Comag Agencies — Production & Assembly Assistant</h3>
+        <p class="meta">Auckland, New Zealand | Aug 2024 – Present</p>
+        <ul>
+          <li>Coordinated with warehousing, purchasing, and customer service teams to support smooth operational delivery.</li>
+          <li>Maintained stock accuracy and resolved discrepancies to support timely fulfilment.</li>
+          <li>Reinforced data accuracy across operational systems through careful record handling.</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>Duy Tan Plastics — Finance Management Trainee</h3>
+        <p class="meta">Ho Chi Minh City, Vietnam | Sep 2016 – Sep 2017</p>
+        <ul>
+          <li>Rotated across Manufacturing, Sales, and Purchasing to build cross-functional business understanding.</li>
+          <li>Tracked supplier costs, analysed purchasing trends, and supported budgeting and reporting.</li>
+          <li>Built Excel dashboards and validated operational data across departments.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section id="personal">
   <div class="container">
     <h2>Beyond Work</h2>
@@ -536,24 +639,33 @@
 
     <div class="about-box">
       <p>
-        I find clarity in movement — especially in places like trains, where everything is in motion,
-        yet feels stable. It’s often where my thoughts become the most focused and clear.
+        I find clarity in movement — especially in places like trains, where everything is in motion, yet feels stable. It’s often where my thoughts become the most focused and clear.
       </p>
 
       <p>
-        Being close to nature is how I reset. I enjoy walking through forests, noticing small details —
-        flowers, plants, even the quiet presence of moss. Looking up through the trees,
-        watching light pass through the leaves, is something I never get tired of.
+        Being close to nature is how I reset. I enjoy walking through forests, noticing small details — flowers, plants, even the quiet presence of moss. Looking up through the trees, watching light pass through the leaves, is something I never get tired of.
       </p>
 
       <p>
-        I also find comfort in simple, grounding routines. Cooking for someone I care about feels like a form of therapy,
-        and cleaning — especially when I feel stuck — helps me reset and clear my mind.
+        I also find comfort in simple, grounding routines. Cooking for someone I care about feels like a form of therapy, and cleaning — especially when I feel stuck — helps me reset and clear my mind.
       </p>
 
       <p>
-        I enjoy working with my hands — gardening and handcrafts give me a sense of connection,
-        where I can feel the process, create something tangible, and express creativity in a quiet way.
+        I enjoy working with my hands — gardening and handcrafts give me a sense of connection, where I can feel the process, create something tangible, and express creativity in a quiet way.
+      </p>
+
+      <p>
+        Another thing I enjoy is film photography. I have a deep appreciation for my old film camera — an Asahi Pentax K1000, much older than me.
+        With film, the experience matters more than the outcome. You take each photo, then wait until the roll is finished to see the result.
+        I don’t try to be technical — I don’t focus on ISO, aperture, or settings.
+        Every photo I take is based on feeling, a moment from my own journey.
+      </p>
+      
+      <p>
+        There’s something meaningful in not knowing exactly what you will get.
+        Sometimes the photos turn out beautifully, sometimes they don’t — but that uncertainty is part of what I enjoy.
+        Even when people ask how I took a particular shot, I often don’t have a precise answer.
+        It’s simply how I experienced that moment, and that’s what I value most about film photography.
       </p>
 
       <p>
